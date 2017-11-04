@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB05779B-8417-4779-A64C-FCDA8B563A1B}</ProjectGuid>
+    <ProjectGuid>{CF3A1534-D197-4121-8CE0-C27C8D7EA8B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DPBBL</RootNamespace>
@@ -39,20 +39,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="CategoryBBL.cs" />
+    <Compile Include="ContactBBL.cs" />
+    <Compile Include="CRUD.cs" />
+    <Compile Include="CustomerBBL.cs" />
+    <Compile Include="EmployeeBBL.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="ICRUDState.cs" />
+    <Compile Include="OrderBBL.cs" />
+    <Compile Include="ProductBBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Region.cs" />
-    <Compile Include="Shipper.cs" />
-    <Compile Include="Supplier.cs" />
-    <Compile Include="Territories.cs" />
+    <Compile Include="RegionBBL.cs" />
+    <Compile Include="ShipperBBL.cs" />
+    <Compile Include="SupplierBBL.cs" />
+    <Compile Include="TerritoriesBBL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <ProjectReference Include="..\DPDAL\DPDAL.csproj">
+      <Project>{439d6d0d-4798-4652-afac-56c05831d9e7}</Project>
+      <Name>DPDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPDTO\DPDTO.csproj">
+      <Project>{eb05779b-8417-4779-a64c-fcda8b563a1b}</Project>
+      <Name>DPDTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Factory\Factory.csproj">
+      <Project>{99965324-ac6e-4ad6-b762-a5a95b963f43}</Project>
+      <Name>Factory</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

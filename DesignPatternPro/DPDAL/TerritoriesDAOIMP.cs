@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using DPBBL;
+using DPDTO;
 namespace DPDAL
 {
    public class TerritoriesDAOIMP:ICrudDAO<Territories>

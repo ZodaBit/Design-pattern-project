@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
 using Factory;
+using DPDTO;
 using DPBBL;
 
 namespace DPAPL
@@ -24,14 +25,14 @@ namespace DPAPL
             InitializeComponent();
         }
 
-        ICrudDAO<Employee> ObjEmp = (ICrudDAO<Employee>)FactoryProducer.GetDAOIMPObject("Employee");
+        CRUD<Employee>  ObjEmp  = new CRUD<Employee>("Employee");
         Employee Emp = new Employee();
 
         #region Load Data
         private void LoadData()
         {
 
-            gridControl1.DataSource = ObjEmp.GetAllData();
+            gridControl1.DataSource = ObjEmp.GetAll();
             gridControl1.DataMember = "Emp";
         }
         #endregion
@@ -132,7 +133,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjEmp.CreateData(Emp);
+                inserted = ObjEmp.Create(Emp);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -167,7 +168,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjEmp.UpdateData(Emp);
+                inserted = ObjEmp.Update(Emp);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -191,7 +192,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjEmp.DeleteData(Emp);
+                inserted = ObjEmp.Delete(Emp);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Deleted  Successfully");

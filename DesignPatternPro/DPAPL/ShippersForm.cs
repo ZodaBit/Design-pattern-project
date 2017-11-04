@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
 using Factory;
+using DPDTO;
 using DPBBL;
 namespace DPAPL
 {
     public partial class ShippersForm : DevExpress.XtraEditors.XtraForm
     {
 
-        ICrudDAO<Shipper> ObjShipper = (ICrudDAO<Shipper>)FactoryProducer.GetDAOIMPObject("Shipper");
+        CRUD<Shipper> ObjShipper =new CRUD<Shipper>("Shipper");
         Shipper _Ship = new Shipper();
         public ShippersForm()
         {
@@ -25,7 +26,7 @@ namespace DPAPL
         #region Load Data
         private void LoadData()
         {
-            gridControl1.DataSource = ObjShipper.GetAllData();
+            gridControl1.DataSource = ObjShipper.GetAll();
             gridControl1.DataMember = "ship";
         }
         #endregion
@@ -51,7 +52,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjShipper.CreateData(_Ship);
+                inserted = ObjShipper.Create(_Ship);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -75,7 +76,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjShipper.UpdateData(_Ship);
+                inserted = ObjShipper.Update(_Ship);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -99,7 +100,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjShipper.DeleteData(_Ship);
+                inserted = ObjShipper.Delete(_Ship);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Deleted  Successfully");

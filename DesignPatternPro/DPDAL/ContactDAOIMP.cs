@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DPDAL;
 using System.Data.SqlClient;
 using System.Data;
-using DPBBL;
+using DPDTO;
 
 namespace DPDAL
 {

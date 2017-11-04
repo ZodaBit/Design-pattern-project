@@ -11,15 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
-using DPBBL;
+using DPDTO;
 using Factory;
+using DPBBL;
 
 namespace DPAPL
 {
     public partial class ContactsForm : DevExpress.XtraEditors.XtraForm
     {
-        //ContactDAO ObjContact = (ContactDAO)FactoryProducer.getCust("Contact");
-        ICrudDAO<Contact> ObjContact = (ICrudDAO<Contact>)FactoryProducer.GetDAOIMPObject("Contact");
+
+        CRUD<Contact> ObjContact = new CRUD<Contact>("Contact");
         Contact Cot = new Contact();
         public ContactsForm()
         {
@@ -28,7 +29,7 @@ namespace DPAPL
         #region Load data
         private void LoadData()
         {
-            gridControl1.DataSource = ObjContact.GetAllData();
+            gridControl1.DataSource = ObjContact.GetAll();
             gridControl1.DataMember = "Cont";
         }
         #endregion
@@ -122,7 +123,7 @@ namespace DPAPL
             bool inserted;
             try{
                 setfilds();
-                inserted = ObjContact.CreateData(Cot);
+                inserted = ObjContact.Create(Cot);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -145,7 +146,7 @@ namespace DPAPL
             try
             {
                 setfilds();
-                inserted = ObjContact.UpdateData(Cot);
+                inserted = ObjContact.Update(Cot);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Update Successfully");
@@ -169,7 +170,7 @@ namespace DPAPL
             try
             {
                 setfilds();
-                deleted = ObjContact.DeleteData(Cot);
+                deleted = ObjContact.Delete(Cot);
                 if (deleted == true)
                 {
                     XtraMessageBox.Show("Deleted Successfully");

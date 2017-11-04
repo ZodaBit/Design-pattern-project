@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
-using DPBBL;
+using DPDTO;
 using Factory;
+using DPBBL;
 
 namespace DPAPL
 {
     public partial class TerritoriesForm : DevExpress.XtraEditors.XtraForm
     {
-        ICrudDAO<Territories> ObjTerr = (ICrudDAO<Territories>)FactoryProducer.GetDAOIMPObject("Territories");
+        CRUD<Territories> ObjTerr =new CRUD<Territories>("Territories");
         Territories Terr = new Territories();
         public TerritoriesForm()
         {
@@ -25,7 +26,7 @@ namespace DPAPL
         #region LoadData
         private void LoadData()
         {
-            gridControl1.DataSource = ObjTerr.GetAllData();
+            gridControl1.DataSource = ObjTerr.GetAll();
             gridControl1.DataMember = "Ter";
         }
         #endregion
@@ -51,7 +52,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjTerr.CreateData(Terr);
+                inserted = ObjTerr.Create(Terr);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -75,7 +76,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjTerr.UpdateData(Terr);
+                inserted = ObjTerr.Update(Terr);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -99,7 +100,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjTerr.DeleteData(Terr);
+                inserted = ObjTerr.Delete(Terr);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Deleted  Successfully");

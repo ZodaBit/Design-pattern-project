@@ -12,15 +12,16 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
 using Factory;
+using DPDTO;
 using DPBBL;
 
 namespace DPAPL
 {
     public partial class CategoiesForm : DevExpress.XtraEditors.XtraForm
     {
-
-        CategoryDAOIMP CatObj = (CategoryDAOIMP)FactoryProducer.GetDAOIMPObject("Category");
-        Category cat = new Category();
+           Category cat = new Category();
+        CRUD<Category> CatObj = new CRUD<Category>("Category");
+        
         
         public CategoiesForm()
         {
@@ -28,7 +29,7 @@ namespace DPAPL
         }
         private void Loadform()
         {
-            gridControl1.DataSource = CatObj.GetAllData();
+            gridControl1.DataSource = CatObj.GetAll();
             gridControl1.DataMember = "allcat";
         }
         public void Setdata()
@@ -70,7 +71,7 @@ namespace DPAPL
             try
             {
                 Setdata();
-                inserted = CatObj.CreateData(cat);
+                inserted = CatObj.Create(cat);
                 if(inserted==true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -94,7 +95,7 @@ namespace DPAPL
             try
             {
                 Setdata();
-                inserted = CatObj.UpdateData(cat);
+                inserted = CatObj.Update(cat);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -118,7 +119,7 @@ namespace DPAPL
             try
             {
                 Setdata();
-                inserted = CatObj.DeleteData(cat);
+                inserted = CatObj.Delete(cat);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Deleted  Successfully");

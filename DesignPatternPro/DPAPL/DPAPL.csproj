@@ -203,12 +203,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DPBBL\DPBBL.csproj">
-      <Project>{eb05779b-8417-4779-a64c-fcda8b563a1b}</Project>
+      <Project>{cf3a1534-d197-4121-8ce0-c27c8d7ea8b8}</Project>
       <Name>DPBBL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DPDAL\DPDAL.csproj">
       <Project>{439d6d0d-4798-4652-afac-56c05831d9e7}</Project>
       <Name>DPDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPDTO\DPDTO.csproj">
+      <Project>{eb05779b-8417-4779-a64c-fcda8b563a1b}</Project>
+      <Name>DPDTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\Factory\Factory.csproj">
       <Project>{99965324-ac6e-4ad6-b762-a5a95b963f43}</Project>

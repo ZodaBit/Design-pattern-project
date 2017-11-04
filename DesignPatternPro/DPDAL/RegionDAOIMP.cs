@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using DPBBL;
-using DPBBL;
+using DPDTO;
+using DPDTO;
 
 namespace DPDAL
 {

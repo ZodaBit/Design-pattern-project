@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
-using DPBBL;
+using DPDTO;
 using Factory;
+using DPBBL;
 
 namespace DPAPL
 {
     public partial class CustomersForm : DevExpress.XtraEditors.XtraForm
     {
-
-       // CustomerDAO objCust =(CustomerDAO) FactoryProducer.getCust("Customer");
-        ICrudDAO<Customer> objCust = (ICrudDAO<Customer>)FactoryProducer.GetDAOIMPObject("Customer");
+        CRUD<Customer> objCust = new CRUD<Customer>("Customer");
         Customer cust = new Customer();
 
         public CustomersForm()
@@ -45,7 +44,7 @@ namespace DPAPL
         #region Load data method
         private void LoadData()
         {
-            gridControl1.DataSource = objCust.GetAllData();
+            gridControl1.DataSource = objCust.GetAll();
             gridControl1.DataMember = "cust";
         }
         #endregion
@@ -78,7 +77,7 @@ namespace DPAPL
             try
             {
                 SetCustomer();
-                inserted = objCust.CreateData(cust);
+                inserted = objCust.Create(cust);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -103,7 +102,7 @@ namespace DPAPL
             try
             {
                 SetCustomer();
-                updated = objCust.UpdateData(cust);
+                updated = objCust.Update(cust);
                 if (updated == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -127,7 +126,7 @@ namespace DPAPL
             try
             {
                 SetCustomer();
-                deleted = objCust.DeleteData(cust);
+                deleted = objCust.Delete(cust);
                 if (deleted== true)
                 {
                     XtraMessageBox.Show("Deleted Successfully");

@@ -11,14 +11,14 @@ using DevExpress.XtraEditors;
 
 using DPDAL;
 using Factory;
+using DPDTO;
 using DPBBL;
-
 
 namespace DPAPL
 {
     public partial class SuppliersForm : DevExpress.XtraEditors.XtraForm
     {
-        ICrudDAO<Supplier> ObjSup = (ICrudDAO<Supplier>)FactoryProducer.GetDAOIMPObject("Supplier");
+        CRUD<Supplier> ObjSup =new CRUD<Supplier>("Supplier");
         Supplier Sup = new Supplier();
         public SuppliersForm()
         {
@@ -28,7 +28,7 @@ namespace DPAPL
         #region Load Data
         private void LoadData()
         {
-            gridControl1.DataSource = ObjSup.GetAllData();
+            gridControl1.DataSource = ObjSup.GetAll();
             gridControl1.DataMember = "sup";
         }
         #endregion
@@ -73,7 +73,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjSup.CreateData(Sup);
+                inserted = ObjSup.Create(Sup);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -97,7 +97,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjSup.UpdateData(Sup);
+                inserted = ObjSup.Update(Sup);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Update Successfully");
@@ -121,7 +121,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                deleted = ObjSup.DeleteData(Sup);
+                deleted = ObjSup.Delete(Sup);
                 if (deleted == true)
                 {
                     XtraMessageBox.Show("Deleted Successfully");

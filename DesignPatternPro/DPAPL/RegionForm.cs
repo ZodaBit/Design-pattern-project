@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
-using DPBBL;
+using DPDTO;
 using Factory;
+using DPBBL;
 namespace DPAPL
 {
     public partial class RegionForm : DevExpress.XtraEditors.XtraForm
     {
-        ICrudDAO<MyRegion> ObjRegi = (ICrudDAO<MyRegion>)FactoryProducer.GetDAOIMPObject("Region");
+        CRUD<MyRegion> ObjRegi = new CRUD<MyRegion>("Region");
         MyRegion _re = new MyRegion();
         public RegionForm()
         {
@@ -24,7 +25,7 @@ namespace DPAPL
         #region Load Data
         private void LoadData()
         {
-            gridControl1.DataSource = ObjRegi.GetAllData();
+            gridControl1.DataSource = ObjRegi.GetAll();
             gridControl1.DataMember = "reg";
         }
         #endregion
@@ -50,7 +51,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted =ObjRegi.CreateData(_re);
+                inserted =ObjRegi.Create(_re);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -74,7 +75,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted =ObjRegi.UpdateData(_re);
+                inserted =ObjRegi.Update(_re);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Updated Successfully");
@@ -98,7 +99,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted =ObjRegi.DeleteData(_re);
+                inserted =ObjRegi.Delete(_re);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Deleted  Successfully");

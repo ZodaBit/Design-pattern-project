@@ -9,15 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DPDAL;
-using DPBBL;
+using DPDTO;
 using Factory;
+using DPBBL;
 
 namespace DPAPL
 {
     public partial class OrdersForm : DevExpress.XtraEditors.XtraForm
     {
 
-        ICrudDAO<Order> ObjOrder = (ICrudDAO<Order>)FactoryProducer.GetDAOIMPObject("Order");
+        CRUD<Order> ObjOrder = new CRUD<Order>("Order");
         Order Ord= new Order();
         public OrdersForm()
         {
@@ -26,7 +27,7 @@ namespace DPAPL
         #region LoadData
         private void LoadData()
         {
-            gridControl1.DataSource = ObjOrder.GetAllData();
+            gridControl1.DataSource = ObjOrder.GetAll();
             gridControl1.DataMember = "ord";
         }
         #endregion
@@ -76,7 +77,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjOrder.CreateData(Ord);
+                inserted = ObjOrder.Create(Ord);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Saved Successfully");
@@ -100,7 +101,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                inserted = ObjOrder.UpdateData(Ord);
+                inserted = ObjOrder.Update(Ord);
                 if (inserted == true)
                 {
                     XtraMessageBox.Show("Update Successfully");
@@ -124,7 +125,7 @@ namespace DPAPL
             try
             {
                 SetData();
-                deleted = ObjOrder.DeleteData(Ord);
+                deleted = ObjOrder.Delete(Ord);
                 if (deleted == true)
                 {
                     XtraMessageBox.Show("Deleted Successfully");
