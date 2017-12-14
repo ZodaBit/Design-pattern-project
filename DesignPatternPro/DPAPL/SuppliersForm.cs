@@ -18,164 +18,62 @@ namespace DPAPL
 {
     public partial class SuppliersForm : DevExpress.XtraEditors.XtraForm
     {
-        CRUD<Supplier> ObjSup =new CRUD<Supplier>("Supplier");
-        Supplier Sup = new Supplier();
+        SuppliersMediator Mediator = new SuppliersMediator();
+        
         public SuppliersForm()
         {
             InitializeComponent();
+            
+        Mediator.Register( Country_textbox);
+        Mediator.Register( HomePage_textbox);
+        Mediator.Register( Phone_textbox);
+        Mediator.Register( Region_textbox);
+        Mediator.Register( PostalCode_textbox);
+        Mediator.Register( Fax_textbox);
+        Mediator.Register( ContactName_textbox);
+        Mediator.Register( ContactTitle_textbox);
+        Mediator.Register( CompanyName_textbox);
+        Mediator.Register( City_textbox);
+        Mediator.Register( Address_textbox);
+        Mediator.Register( Save_toolStripButton);
+        Mediator.Register( Edit_toolStripButton);
+        Mediator.Register( Delete_toolStripButton);
+        Mediator.Register( Clear_toolStripButton);
+        Mediator.Register( SupplierId_textbox);
+        Mediator.Register( gridControl1);
+        Mediator.Register( gridView1);
         }
 
-        #region Load Data
-        private void LoadData()
-        {
-            gridControl1.DataSource = ObjSup.GetAll();
-            gridControl1.DataMember = "sup";
-        }
-        #endregion
-        #region clear filds
-        private void clear()
-        {
-            SupplierId_textbox.Text = "" ;
-            CompanyName_textbox.Text="";
-            ContactName_textbox.Text="";
-            ContactTitle_textbox.Text="";
-            Address_textbox.Text="";
-            City_textbox.Text="";
-            Region_textbox.Text="";
-            PostalCode_textbox.Text="";
-            Country_textbox.Text="";
-            Phone_textbox.Text="";
-            Fax_textbox.Text="";
-            HomePage_textbox.Text="";
-        }
-        #endregion 
-
-        #region Set filds
-        private void SetData()
-        {
-            Sup.SupplierID = Convert.ToInt32(SupplierId_textbox.Text);
-            Sup.CompanyName = CompanyName_textbox.Text;
-            Sup.ContactName = ContactName_textbox.Text;
-            Sup.ContactTitle = ContactTitle_textbox.Text;
-            Sup.Address = Address_textbox.Text;
-            Sup.City = City_textbox.Text;
-            Sup.Region = Region_textbox.Text;
-            Sup.PostalCode = PostalCode_textbox.Text;
-            Sup.Country = Country_textbox.Text;
-            Sup.Phone = Phone_textbox.Text;
-            Sup.Fax=Fax_textbox.Text;
-            Sup.HomePage = HomePage_textbox.Text;
-        }
-        #endregion 
+        
         private void Save_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted = ObjSup.Create(Sup);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Saved Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Saved Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                //XtraMessageBox.Show(ex.ToString());
-            }
+            Mediator.saveClick();
         }
 
         private void Edit_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted = ObjSup.Update(Sup);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Update Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Updated Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                //XtraMessageBox.Show(ex.ToString());
-            }
+            Mediator.Editclick();
         }
 
         private void Delete_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool deleted;
-            try
-            {
-                SetData();
-                deleted = ObjSup.Delete(Sup);
-                if (deleted == true)
-                {
-                    XtraMessageBox.Show("Deleted Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Deleted Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-              // MessageBox.Show(ex.ToString());
-            }
+            Mediator.Deleteclick();
         }
 
         private void Clear_toolStripButton_Click(object sender, EventArgs e)
         {
-            clear();
+            Mediator.ClearClick();
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-
-            string[] Vals = { "SupplierID", "CompanyName", "ContactName", "ContactTitle", "Address", "City", "Region", "PostalCode", "Country", "Phone", "Fax", "HomePage" };
-
-            try
-            {
-                SupplierId_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[0]));
-                CompanyName_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[1])); ;
-                ContactName_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[2]));
-                ContactTitle_textbox.Text= Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[3]));
-                Address_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[4]));
-                City_textbox.Text= Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[5]));
-                Region_textbox.Text= Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[6]));
-                PostalCode_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[7]));
-                Country_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[8]));
-                Phone_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[9]));
-                Fax_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[10]));
-                HomePage_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[11]));
-                
-
-            }
-            catch (Exception ex)
-            {
-                //store exeption and display 
-                //XtraMessageBox.Show("please clik on the row properly");
-            }
+            Mediator.Gridview1Click();
+           
         }
 
         private void SuppliersForm_Load(object sender, EventArgs e)
         {
-            LoadData();
+            Mediator.LoadData();
         }
 
         

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c2d96607-a47d-4f51-ad1b-b9902cb1e5b0"
+  name="XtraGrid"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="00645afb-3c8d-4ea0-bd8d-0bd7197b4109"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDevExpress.XtraGrid"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="894f6bd9-e2b4-4352-b4a7-be29ceb442f3"
+        LastKnownName="Views"
+        LastKnownLocation="Package4_1447.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="27beeb20-16c5-40b6-83c5-dc92e9d5c7a7"
+        name="GridControl"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="602d9999-d13b-4b5e-9292-e98fd244e892"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDevExpress 14.1%2FComponents%2FBin%2FFramework%2FDevExpress.XtraGrid.v14.1.dll&quot; Namespace%3DDevExpress.XtraGrid Type%3DGridControl"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a85935fd-f9c9-426c-9c39-569d8fc75669"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c23f4c1f-8b1c-4417-be91-115172960df2">
+                <propertyInstance
+                  Id="a345f50d-77a7-40ff-80bc-fb6ddb200b55"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0313308f-0848-45d6-94ae-5bf374bd4fa2">
+                <propertyInstance
+                  Id="8d5ec2d6-d8d7-4f83-a9ec-e225d3688287"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f095cfe5-e395-4ebf-951c-644d73a3df6a">
+                <propertyInstance
+                  Id="ee47d064-a156-43a0-b14d-7e3eed402a8b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d776c4cf-98f4-4afa-b682-b1763386781e">
+                <propertyInstance
+                  Id="d7846435-dd70-47a2-9cfc-a107bb817869"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="520215f9-d6c3-40c5-84fb-8aacf74e3c55">
+                <propertyInstance
+                  Id="56263065-ac38-45ed-a39b-c302d9bcdf82"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c5b7267c-2c39-4c30-9508-5082508ea1d5"
+        LastKnownName="Columns"
+        LastKnownLocation="Package13_1447.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

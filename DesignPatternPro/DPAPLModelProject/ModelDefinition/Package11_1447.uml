@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9f660036-8903-4848-bfd4-7e365e114ddc"
+  name="DPDTO"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="24d828a6-4ba0-4592-9aff-671b2099f9ce"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDPDTO"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="4dbdfe1f-6a2a-4848-b183-97b9cc14edb3"
+        name="Employee"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d912d372-52e2-444b-97d0-3f6a8edea24e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DEmployee"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a042bd69-b8c0-47f9-9b59-f86bc9c891fa"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f8946c52-fa2d-45d6-9b03-a4c15087c60f">
+                <propertyInstance
+                  Id="6fccfe98-ebd9-4efd-89bf-3e997d145b8a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ffce735f-04a9-41c8-911c-8e53cca8b695">
+                <propertyInstance
+                  Id="690d79bf-c445-4f3e-9ecb-c65083f6f539"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="579c547c-a031-4232-a1f4-057497944f6c">
+                <propertyInstance
+                  Id="0d6cd998-2372-4e18-a09b-8a193105daac"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c9866b14-3da5-4bfd-b217-5494859294c2">
+                <propertyInstance
+                  Id="c27ee79f-d050-4107-af18-28f139f13c0c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff6fbbf4-6176-4e9b-b5c3-86613ad3e92b">
+                <propertyInstance
+                  Id="9e2578ea-acba-4dd3-83a0-ba90bf6011b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fd0e578c-5008-4a65-a7c7-b89d51c7a2e5"
+        name="Order"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f8746efa-795a-47ae-8b00-71db1aca1564"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DOrder"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e44b772a-55de-4312-b094-76c7b0a6f00c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7063bfd1-9ab6-402c-8618-88f22a54b15d">
+                <propertyInstance
+                  Id="708b6fe2-f2fc-4ab8-8578-f8e41b76926b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6ca81593-8c4d-4513-9f70-ddd2038eaeaa">
+                <propertyInstance
+                  Id="dee3e0f7-9a28-483b-8312-0acdd20656fe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b6a06be-9dee-4dc3-b33d-20f39018c3f6">
+                <propertyInstance
+                  Id="6c009219-06ef-48f5-a126-1e0febf3572b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8fe8d6c-11a8-4af6-b716-8af32c03d6b5">
+                <propertyInstance
+                  Id="50505df9-bf9e-4ec2-9fb7-f3b985eea9df"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8ae22914-54a9-4595-ae3b-62bb797f6cbc">
+                <propertyInstance
+                  Id="e5cc00bc-330f-463a-8117-3c86525b0900"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="df8d78f3-5a42-4e72-a5f5-266710911523"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="482af0e5-9285-49ea-b83e-246a09e0f27b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DProduct"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b01bca09-de32-4fc1-bcfd-2b59c676dc8b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f26e76a-ae89-45a1-a085-22b0ab0332d9">
+                <propertyInstance
+                  Id="8fbf7ff4-3bf9-4196-a0e1-df273cfc1dd7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d963c4a1-49b9-4ac6-8d00-7b89422a2777">
+                <propertyInstance
+                  Id="880e7e43-ceda-4786-bd3a-c3e7ca6dba94"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db4edead-96a5-4509-96c4-0be55caee2fd">
+                <propertyInstance
+                  Id="f6a497ab-af4c-439e-9159-b43799e58d43"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5e8ad30-9b3c-4ce8-b816-5de9ff68dd93">
+                <propertyInstance
+                  Id="98970c69-7c28-459f-adfa-7d50a59b8df9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b92c88d9-9535-4436-9c6d-59dab0f16bb5">
+                <propertyInstance
+                  Id="15869ea6-d5d1-4b6b-9d2f-56fef8537087"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="75d0f351-984b-456d-a04b-7492c31cb91d"
+        name="MyRegion"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9d4cb566-8145-4d4f-8eca-ba6ea5c833c4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DMyRegion"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1be2c00e-584d-4fe0-b2b9-2ef41f8c9935"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f85a4c0e-93cb-4663-800e-c5754f39cfa4">
+                <propertyInstance
+                  Id="11a5d339-f25c-40b8-9911-03d2b8f06a80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3029562f-2cf0-4b5b-84b1-e82c080c6da2">
+                <propertyInstance
+                  Id="20a81f2a-9006-4862-8966-d3b68343178f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26ddc438-e827-4774-90ce-51e053b7a05d">
+                <propertyInstance
+                  Id="7e83967b-e625-4b7b-8ce0-13faefd24b83"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fc8ce37-b435-404f-a43d-fde32b63d68f">
+                <propertyInstance
+                  Id="15de457a-3db6-4dad-a7e4-8c38b77c871c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92e7f6ae-3538-44cc-8c65-40e95e26cb8a">
+                <propertyInstance
+                  Id="3ee854d1-f33d-4a38-9886-7d64cf38756c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="65432640-3458-454b-92bd-9800ccc3acd3"
+        name="Shipper"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="be1a39b9-b9b2-4883-8fc1-c6e774387c24"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DShipper"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8929e3e2-ceda-4210-bc2a-0ce349e6a8c4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15c17e04-9d10-445a-a1c2-1250a1481a46">
+                <propertyInstance
+                  Id="7c0ca679-a008-4d27-9e63-04417cbebdf2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7afe1cdf-f338-4bb3-99d9-887c84a2a8f3">
+                <propertyInstance
+                  Id="44bfaeef-256d-4816-b51d-6ec0ea025396"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="edd0762f-7517-4596-a504-462cf4dd4425">
+                <propertyInstance
+                  Id="e7581b4b-e3b7-4d92-9e80-56fc811ba1ad"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb2fcb42-4afd-4baf-9956-44bc461f52a4">
+                <propertyInstance
+                  Id="6dcd6914-cf0c-4ddc-8f78-64813f8bbe01"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cea06e55-bbb5-4c5b-aa09-8988ba1744c5">
+                <propertyInstance
+                  Id="d2537919-8e0b-4a34-919c-3b05002c84c7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f87c10e-2b15-418e-9bec-6ab62f9767b0"
+        name="Supplier"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7203d259-fb51-4724-8e29-88f04947e3ef"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DSupplier"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fd8cc13b-c6fd-455b-babc-d6fca8556066"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e2ab3c63-5c32-4506-aa8b-cce0f735002d">
+                <propertyInstance
+                  Id="8ff85f28-f91d-4b18-872f-2cb7a766cb26"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e95a403d-c00b-4d28-9583-514bd7025795">
+                <propertyInstance
+                  Id="a3689dea-5c0f-40f8-bb6b-50ddfec643b1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc0bb0fd-b778-47b1-b038-6625b70e45fa">
+                <propertyInstance
+                  Id="27d90a2e-4e0e-4326-bb37-f010d26fb3b8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e127aa1-e188-477f-84ae-b26cb50c898e">
+                <propertyInstance
+                  Id="cdde4266-1090-4c67-9b06-76c8f416fcdf"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="399f1768-d8f9-4684-b214-6a4f5235ae25">
+                <propertyInstance
+                  Id="13f7de0a-339e-4d2d-a08f-6b78d46bfee1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="20a4498a-70c7-405e-9cf5-ca60da3fbadd"
+        name="Territories"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3d91029c-d2c2-4a9c-8aaa-e19012a97998"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DTerritories"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e370f240-2c74-4790-bd57-063e376778ae"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3fdd385-05bd-4f10-a1d3-dc2f94b7bc41">
+                <propertyInstance
+                  Id="711cd7ea-fa59-43ea-a1fe-9f0f14c62491"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dbb52bd9-2976-4bc6-87f9-5804669542f1">
+                <propertyInstance
+                  Id="a88f1e63-a311-4f3b-a36d-ab3d281942e0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3070890e-6851-4dfc-b608-0c3938857b43">
+                <propertyInstance
+                  Id="a2d34a2c-ead1-44e3-8c2f-375dbff20303"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c13a7c50-4321-4932-9580-2f645643f3ad">
+                <propertyInstance
+                  Id="f7a1fe1d-418b-49f5-9eec-d649ea9ab6c8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce34ca11-af83-4b6f-8279-38ce65f6f1ad">
+                <propertyInstance
+                  Id="fa0b5cd3-fd0b-4c85-89ac-d362a95d720f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b2c7f8d7-c719-460b-b2aa-7952432ae505"
+        name="Category"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9558345b-9414-40cb-a4cd-111f97fa9e5b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DCategory"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1653c07f-f9a6-4837-9f3b-205eca2dd87c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff40a2fa-bebc-4a04-8393-d140b56b1d2a">
+                <propertyInstance
+                  Id="f677f18f-1330-4522-85de-f20ba3855aaf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7288c745-2498-4121-8a15-69db80d3774d">
+                <propertyInstance
+                  Id="afb72678-2792-4c28-9ab2-55e1f2809988"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="453bff9e-a96d-4ef8-9410-5030e9f29249">
+                <propertyInstance
+                  Id="116dc3a3-5b87-4346-9138-00a05b8e9b3f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5583dab7-922e-440b-be34-46a397a51eac">
+                <propertyInstance
+                  Id="29cf4130-fd83-48fc-ae1f-334bec91860e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f94c77f-079a-40f2-82f6-92d1410b6b85">
+                <propertyInstance
+                  Id="ed6f4f4f-0eba-4aa3-92b2-151bbefb8dfe"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3b4df723-62ce-44ec-9798-77a4ddf3fc62"
+        name="Contact"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="513ec3b6-cd75-4727-8270-c04e397543ed"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DContact"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f093d356-8914-4a43-88a5-fee355773e2c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6e191e4c-d652-4fc8-a208-a61481ea64b8">
+                <propertyInstance
+                  Id="79cf8f05-e130-41e4-b341-a841c5e5208f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a1f7853-ae0e-4565-b21e-62c824648f88">
+                <propertyInstance
+                  Id="92da314f-a26f-4ce9-bd95-fcfcbec4200b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08ddfa51-5d47-4b7f-a6e4-a261e2c165bc">
+                <propertyInstance
+                  Id="5996ea47-a47d-48d2-9a8f-3b70a55a5cbc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b978dfa-297e-4d4a-8ce4-3011f6f24a6c">
+                <propertyInstance
+                  Id="209f044b-5fb0-4807-adb2-5d9615bed358"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8612ceb-c4b1-4895-8eb2-3bd1e337f259">
+                <propertyInstance
+                  Id="d81ae6cf-4285-4df9-9473-d95bac49753f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="831ef5cb-a9a8-4f9a-ae9f-aa5788a0300b"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="184fc604-3065-4adf-9de7-8869eba9b860"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FBEP%2FDesktop%2FDesignPatternProject%2FDesignPatternPro%2FDPDTO%2Fbin%2FDebug%2FDPDTO.dll Namespace%3DDPDTO Type%3DCustomer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0fc738f7-9865-41be-8188-bb2da6d33cf9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98ed2621-3399-43af-ad88-c19babc33aaf">
+                <propertyInstance
+                  Id="ffcf4954-f345-45e5-a2c4-caa5d0eb1aeb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83a4d6ca-53a9-4da3-82dd-e5cc304151ee">
+                <propertyInstance
+                  Id="2e7a5985-c5e1-4d84-854d-4d96ee0986e2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a90f8c7-21d9-4e37-8f52-48526d128004">
+                <propertyInstance
+                  Id="54702c23-9243-445b-a093-30712755249e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9a6403f-f86f-42b1-be75-3f74edec9bfa">
+                <propertyInstance
+                  Id="429a8a0e-5771-49f8-b706-f4f3cd704739"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab54e636-c2e1-4ef3-8446-ede96fe02df1">
+                <propertyInstance
+                  Id="f56e476a-43df-4f64-a216-fb0e8816c8bc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

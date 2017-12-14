@@ -16,134 +16,51 @@ namespace DPAPL
 {
     public partial class ShippersForm : DevExpress.XtraEditors.XtraForm
     {
-
-        CRUD<Shipper> ObjShipper =new CRUD<Shipper>("Shipper");
-        Shipper _Ship = new Shipper();
+         ShippersMediator Mediator=new ShippersMediator();
+       
         public ShippersForm()
         {
             InitializeComponent();
+           
+        Mediator.Register( Phone_textbox);
+        Mediator.Register( CompanyName_textbox);
+        Mediator.Register( ShipperId_textbox);
+        Mediator.Register( Save_toolStripButton);
+        Mediator.Register( Edit_toolStripButton);
+        Mediator.Register( Delete_toolStripButton);
+        Mediator.Register( Clear_toolStripButton);
+        Mediator.Register( gridControl1);
+        Mediator.Register( gridView1);
         }
-        #region Load Data
-        private void LoadData()
-        {
-            gridControl1.DataSource = ObjShipper.GetAll();
-            gridControl1.DataMember = "ship";
-        }
-        #endregion
-        #region clear filds
-        private void clear()
-        {
-            ShipperId_textbox.Text = "";
-            CompanyName_textbox.Text = "";
-            Phone_textbox.Text = "";
-        }
-        #endregion
-        #region Set data
-        private void SetData()
-        {
-            _Ship.ShipperID = Convert.ToInt32(ShipperId_textbox.Text);
-            _Ship.CompanyName = CompanyName_textbox.Text;
-            _Ship.Phone = Phone_textbox.Text;
-        }
-        #endregion
+      
         private void Save_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted = ObjShipper.Create(_Ship);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Saved Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Saved Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-               // XtraMessageBox.Show(ex.ToString());
-            }
+            Mediator.saveClick();  
          }
 
         private void Edit_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted = ObjShipper.Update(_Ship);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Updated Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Updated Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-               // MessageBox.Show("opps!!! somthing is happning");
-            }
+            Mediator.Editclick();
         }
 
         private void Delete_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted = ObjShipper.Delete(_Ship);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Deleted  Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Deleted Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show("opps somthing is going on !!!");
-            }
+            Mediator.Deleteclick();
         }
 
         private void Clear_toolStripButton_Click(object sender, EventArgs e)
         {
-            clear();
+            Mediator.ClearClick();
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            string[] Vals = { "ShipperID","CompanyName", "Phone" };
-
-            try
-            {
-                ShipperId_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[0]));
-                CompanyName_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[1])); ;
-                Phone_textbox.Text= Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[2]));
-
-            }
-            catch (Exception ex)
-            {
-                //store exeption and display 
-                //XtraMessageBox.Show("please clik on the row properly");
-            }
+            Mediator.Gridview1Click(); 
         }
 
         private void ShippersForm_Load(object sender, EventArgs e)
         {
-            LoadData();
+          Mediator.LoadData();
         }
 
         

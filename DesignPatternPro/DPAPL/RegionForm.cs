@@ -16,132 +16,50 @@ namespace DPAPL
 {
     public partial class RegionForm : DevExpress.XtraEditors.XtraForm
     {
-        CRUD<MyRegion> ObjRegi = new CRUD<MyRegion>("Region");
-        MyRegion _re = new MyRegion();
+        RegionMediator Mediator = new RegionMediator();  
         public RegionForm()
         {
             InitializeComponent();
+            
+        Mediator.Register( Save_toolStripButton);
+        Mediator.Register( Edit_toolStripButton);
+        Mediator.Register( Delete_toolStripButton);
+        Mediator.Register( Clear_toolStripButton);
+        Mediator.Register( RegionId_textbox);
+        Mediator.Register( RegionDescription_textbox);
+        Mediator.Register( gridControl1);
+        Mediator.Register(gridView1);
         }
-        #region Load Data
-        private void LoadData()
-        {
-            gridControl1.DataSource = ObjRegi.GetAll();
-            gridControl1.DataMember = "reg";
-        }
-        #endregion
-        #region clear filds
-        private void clear()
-        {
-            RegionId_textbox.Text = "";
-            RegionDescription_textbox.Text = "";
-        }
-        #endregion
-
-        #region Set data
-        private void SetData()
-        {
-            _re.RegionID = Convert.ToInt32(RegionId_textbox.Text);
-            _re.RegionDescription = RegionDescription_textbox.Text;
-        }
-        #endregion
+       
 
         private void Save_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted =ObjRegi.Create(_re);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Saved Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Saved Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                //XtraMessageBox.Show(ex.ToString());
-            }
+            Mediator.saveClick();
         }
 
         private void Edit_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted =ObjRegi.Update(_re);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Updated Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Updated Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-               // MessageBox.Show("opps!!! somthing is happning");
-            }
+            Mediator.Editclick();
         }
 
         private void Delete_toolStripButton_Click(object sender, EventArgs e)
         {
-            bool inserted;
-            try
-            {
-                SetData();
-                inserted =ObjRegi.Delete(_re);
-                if (inserted == true)
-                {
-                    XtraMessageBox.Show("Deleted  Successfully");
-                    clear();
-                    LoadData();
-                }
-                else
-                {
-                    XtraMessageBox.Show("Note Deleted Successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show("opps somthing is going on !!!");
-            }
+            Mediator.Deleteclick();
         }
 
         private void Clear_toolStripButton_Click(object sender, EventArgs e)
         {
-            clear();
+            Mediator.ClearClick();
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            string[] Vals = { "RegionID", "RegionDescription" };
-
-            try
-            {
-                RegionId_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[0]));
-                RegionDescription_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[1])); ;
-
-            }
-            catch (Exception ex)
-            {
-                //store exeption and display 
-                //XtraMessageBox.Show("please clik on the row properly");
-            }
+            Mediator.Gridview1Click();
         }
 
         private void RegionForm_Load(object sender, EventArgs e)
         {
-            LoadData();
+            Mediator.LoadData();
         }
     }
 }

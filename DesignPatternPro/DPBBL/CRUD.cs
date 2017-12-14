@@ -13,7 +13,8 @@ namespace DPBBL
         private ICRUDState<T> state;
         public CRUD(string _name)
         {
-            state = (ICRUDState<T>)fact.Getstate(_name);
+            this.SetState(_name);
+           
         }
         public bool Create(T obj)
         {
@@ -39,7 +40,10 @@ namespace DPBBL
         {
             return state.Delete(Id);
         }
-
+       public void SetState(string obj_name)
+        {
+            state = (ICRUDState<T>)fact.Getstate(obj_name);
+        }
         
     }
 }

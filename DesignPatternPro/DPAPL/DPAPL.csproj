@@ -68,18 +68,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatagoyMediator.cs" />
     <Compile Include="CategoiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategoiesForm.Designer.cs">
       <DependentUpon>CategoiesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeesMediator.cs" />
+    <Compile Include="RegionMediator.cs" />
+    <Compile Include="ShippersMediator.cs" />
+    <Compile Include="SIngltonClass.cs" />
     <Compile Include="ContactsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ContactsForm.Designer.cs">
       <DependentUpon>ContactsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerMediator.cs" />
     <Compile Include="CustomersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,8 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductMedatior.cs" />
+    <Compile Include="OrderMediator.cs" />
     <Compile Include="OrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +138,14 @@
     <Compile Include="SuppliersForm.Designer.cs">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuppliersMediator.cs" />
     <Compile Include="TerritoriesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TerritoriesForm.Designer.cs">
       <DependentUpon>TerritoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TerritoriesMediator.cs" />
     <EmbeddedResource Include="CategoiesForm.resx">
       <DependentUpon>CategoiesForm.cs</DependentUpon>
     </EmbeddedResource>

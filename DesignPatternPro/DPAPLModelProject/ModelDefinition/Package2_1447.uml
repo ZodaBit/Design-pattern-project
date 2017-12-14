@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="100a753e-a319-4c0c-8a1a-5cdf2a5c7527"
+  name="DevExpress"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c51be43b-81dc-463b-874c-faddf35545b6"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDevExpress"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c2d96607-a47d-4f51-ad1b-b9902cb1e5b0"
+        LastKnownName="XtraGrid"
+        LastKnownLocation="Package3_1447.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="da1fec3e-34bb-4333-aad8-86df46f291a6"
+        LastKnownName="XtraEditors"
+        LastKnownLocation="Package7_1447.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8d0e361e-e20b-424c-842c-357fe4aab633"
+        LastKnownName="LookAndFeel"
+        LastKnownLocation="Package14_1447.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

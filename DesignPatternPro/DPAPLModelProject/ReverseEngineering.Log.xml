@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-12-14T18:05:00" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '6a2cf85b-d8d2-4b16-b1ac-15c2e425b5e7' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraEditors' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraEditors::TextEdit' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraGrid' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraGrid::GridControl' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraGrid::Views' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraGrid::Views::Grid' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DevExpress::XtraGrid::Views::Grid::GridView' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Medium" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator' -  (Class)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::clear' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Clear_toolStripButton' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::ClearClick' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Delete_toolStripButton' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Deleteclick' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Edit_toolStripButton' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Editclick' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::gridControl1' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::gridView1' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Gridview1Click' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::LoadData' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::ObjTerr' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::RegionId_textbox' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Register' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Register::obj' -  (Parameter)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Save_toolStripButton' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::saveClick' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::SetData' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::Terr' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::TerritoriesMediator' -  (Operation)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::TerritoryDescription_textbox' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPAPL::TerritoriesMediator::TerritoryId_textbox' -  (Property)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPBBL' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPBBL::CRUD' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPBBL::CRUD&lt;Territories‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPDTO' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::DPDTO::Territories' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::System' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::System::Windows' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::System::Windows::Forms' -  (Package)" />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DPAPLModelProject::System::Windows::Forms::ToolStripButton' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2017-12-14T18:05:04" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

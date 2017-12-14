@@ -29,52 +29,52 @@ namespace DPAPL
         #region Load data
         private void LoadData()
         {
-            gridControl1.DataSource = ObjContact.GetAll();
-            gridControl1.DataMember = "Cont";
+            SIngltonClass.Myinstance.gridControl1.DataSource = ObjContact.GetAll();
+            SIngltonClass.Myinstance.gridControl1.DataMember = "Cont";
         }
         #endregion
         #region clear
         private void clear()
         {
-            ContactId_textbox.Text = "";
-            ContactType_textbox.Text = "";
-            CompanyName_textbox.Text ="";
-            ContactName_textbox.Text = "";
-            ContactTitle_textbox.Text ="";
-            Address_textbox.Text = "";
-            City_textbox.Text = "";
-            Region_textbox.Text = "";
-            PostalCode_textbox.Text = "";
-            County_textbox.Text = "";
-            Phone_textbox.Text = "";
-            Extension_textbox.Text = "";
-            Fax_textbox.Text = "";
-            HomePage_textbox.Text = "";
-            PhotoPathtextbox.Text = "";
-            Pictue_imagebox.Image = null;
+            SIngltonClass.Myinstance.ContactId_textbox.Text = "";
+            SIngltonClass.Myinstance.ContactType_textbox.Text = "";
+            SIngltonClass.Myinstance.CompanyName_textbox.Text = "";
+            SIngltonClass.Myinstance.ContactName_textbox.Text = "";
+            SIngltonClass.Myinstance.ContactTitle_textbox.Text = "";
+            SIngltonClass.Myinstance.Address_textbox.Text = "";
+            SIngltonClass.Myinstance.City_textbox.Text = "";
+            SIngltonClass.Myinstance.Region_textbox.Text = "";
+            SIngltonClass.Myinstance.PostalCode_textbox.Text = "";
+            SIngltonClass.Myinstance.County_textbox.Text = "";
+            SIngltonClass.Myinstance.Phone_textbox.Text = "";
+            SIngltonClass.Myinstance.Extension_textbox.Text = "";
+            SIngltonClass.Myinstance.Fax_textbox.Text = "";
+            SIngltonClass.Myinstance.HomePage_textbox.Text = "";
+            SIngltonClass.Myinstance.PhotoPathtextbox.Text = "";
+            SIngltonClass.Myinstance.Pictue_imagebox.Image = null;
         }
         #endregion
         #region set filds
         private void setfilds()
         {
-            Cot.ContactID = Convert.ToInt32(ContactId_textbox.Text);
-            Cot.ContactType= ContactType_textbox.Text ;
-            Cot.CompanyName=CompanyName_textbox.Text ;
-            Cot.ContactName=ContactName_textbox.Text ;
-            Cot.ContactTitle=ContactTitle_textbox.Text ;
-            Cot.Address=Address_textbox.Text ;
-            Cot.City=City_textbox.Text ;
-            Cot.Region=Region_textbox.Text ;
-            Cot.PostalCode= PostalCode_textbox.Text ;
-            Cot.Country=County_textbox.Text ;
-            Cot.Phone=Phone_textbox.Text ;
-            Cot.Extension = Extension_textbox.Text;
-            Cot.Fax=Fax_textbox.Text ;
-            Cot.HomePage=HomePage_textbox.Text ;
-            Cot.PhotoPath = PhotoPathtextbox.Text;
+            Cot.ContactID = Convert.ToInt32(SIngltonClass.Myinstance.ContactId_textbox.Text);
+            Cot.ContactType = SIngltonClass.Myinstance.ContactType_textbox.Text;
+            Cot.CompanyName = SIngltonClass.Myinstance.CompanyName_textbox.Text;
+            Cot.ContactName = SIngltonClass.Myinstance.ContactName_textbox.Text;
+            Cot.ContactTitle = SIngltonClass.Myinstance.ContactTitle_textbox.Text;
+            Cot.Address = SIngltonClass.Myinstance.Address_textbox.Text;
+            Cot.City = SIngltonClass.Myinstance.City_textbox.Text;
+            Cot.Region = SIngltonClass.Myinstance.Region_textbox.Text;
+            Cot.PostalCode = SIngltonClass.Myinstance.PostalCode_textbox.Text;
+            Cot.Country = SIngltonClass.Myinstance.County_textbox.Text;
+            Cot.Phone = SIngltonClass.Myinstance.Phone_textbox.Text;
+            Cot.Extension = SIngltonClass.Myinstance.Extension_textbox.Text;
+            Cot.Fax = SIngltonClass.Myinstance.Fax_textbox.Text;
+            Cot.HomePage = SIngltonClass.Myinstance.HomePage_textbox.Text;
+            Cot.PhotoPath = SIngltonClass.Myinstance.PhotoPathtextbox.Text;
             try
             {
-                Cot.Photo = ConvertImageToBytes(Pictue_imagebox.Image);
+                Cot.Photo = ConvertImageToBytes(SIngltonClass.Myinstance.Pictue_imagebox.Image);
             }
             catch (Exception ex)
             {
@@ -201,9 +201,9 @@ namespace DPAPL
         #region  Load from the harddriva
         private void Pictue_imagebox_DoubleClick(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (SIngltonClass.Myinstance.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Pictue_imagebox.Image = Image.FromFile(openFileDialog1.FileName);
+                SIngltonClass.Myinstance.Pictue_imagebox.Image = Image.FromFile(SIngltonClass.Myinstance.openFileDialog1.FileName);
             }
         }
         #endregion
@@ -213,22 +213,22 @@ namespace DPAPL
             string [] Vals={"ContactID","ContactType","CompanyName","ContactName","ContactTitle","Address","City","Region","PostalCode","Country","Phone","Extension","Fax","HomePage","PhotoPath","Photo"};
             try
             {
-                ContactId_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[0]));
-                ContactType_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[1])); ;
-                CompanyName_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[2]));
-                ContactName_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[3]));
-                ContactTitle_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[4]));
-                Address_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[5]));
-                City_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[6]));
-                Region_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[7]));
-                PostalCode_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[8]));
-                County_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[9]));
-                Phone_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[10]));
-                Extension_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[11]));
-                Fax_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[12]));
-                HomePage_textbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[13]));
-                PhotoPathtextbox.Text = Convert.ToString(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[14]));
-                Pictue_imagebox.Image = Convert_byte_to_Image((byte[])gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Vals[15]));
+                SIngltonClass.Myinstance.ContactId_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[0]));
+                SIngltonClass.Myinstance.ContactType_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[1])); ;
+                SIngltonClass.Myinstance.CompanyName_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[2]));
+                SIngltonClass.Myinstance.ContactName_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[3]));
+                SIngltonClass.Myinstance.ContactTitle_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[4]));
+                SIngltonClass.Myinstance.Address_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[5]));
+                SIngltonClass.Myinstance.City_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[6]));
+                SIngltonClass.Myinstance.Region_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[7]));
+                SIngltonClass.Myinstance.PostalCode_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[8]));
+                SIngltonClass.Myinstance.County_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[9]));
+                SIngltonClass.Myinstance.Phone_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[10]));
+                SIngltonClass.Myinstance.Extension_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[11]));
+                SIngltonClass.Myinstance.Fax_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[12]));
+                SIngltonClass.Myinstance.HomePage_textbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[13]));
+                SIngltonClass.Myinstance.PhotoPathtextbox.Text = Convert.ToString(SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[14]));
+                SIngltonClass.Myinstance.Pictue_imagebox.Image = Convert_byte_to_Image((byte[])SIngltonClass.Myinstance.gridView1.GetRowCellValue(SIngltonClass.Myinstance.gridView1.FocusedRowHandle, Vals[15]));
             }
             catch (Exception ex)
             {

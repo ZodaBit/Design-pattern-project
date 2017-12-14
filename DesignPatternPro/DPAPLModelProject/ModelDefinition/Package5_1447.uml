@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7567ed0a-4a6d-4f25-a8df-80d2418620a6"
+  name="Grid"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a67b5f1b-dfe8-421d-86e1-6e3afb09e572"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDevExpress.XtraGrid.Views.Grid"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d357d7d4-bf07-4960-a5ad-a3bc9556911c"
+        name="RowClickEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="91a6924f-0198-43c8-a39f-af539328f0f1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDevExpress 14.1%2FComponents%2FBin%2FFramework%2FDevExpress.XtraGrid.v14.1.dll&quot; Namespace%3DDevExpress.XtraGrid.Views.Grid Type%3DRowClickEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f73cb866-0b38-4e31-90db-2e4d2cb581eb"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3dc6465e-1a6b-4b31-b7ad-ae2e98abb360">
+                <propertyInstance
+                  Id="6445af94-e216-4845-9970-8b924f66a0bc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="64af0c16-427d-4e3b-bbeb-f1ff281b4432">
+                <propertyInstance
+                  Id="44c7adc0-af73-4f38-b48b-b09e60e6713c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="18a4385b-eb7b-4120-b1a7-b5a350dd038d">
+                <propertyInstance
+                  Id="ac0f00f9-d7cc-4dff-a369-3adbc4913798"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ea664fb1-e4be-4714-9ff9-2878f69e5a41">
+                <propertyInstance
+                  Id="e616b392-e0cf-440b-8626-39541b085c6c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8067d8c-7050-42d5-a1e9-f65f512675bc">
+                <propertyInstance
+                  Id="cb232c24-057c-4597-ac8c-7f7a6f0bae7e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="349af5ef-88dd-4876-99c8-39da768b8bd8"
+        name="GridView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="570abbbb-08cc-4013-913e-baa6e0307334"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDevExpress 14.1%2FComponents%2FBin%2FFramework%2FDevExpress.XtraGrid.v14.1.dll&quot; Namespace%3DDevExpress.XtraGrid.Views.Grid Type%3DGridView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="af8225df-d351-48ea-bae2-2561b4f6fd53"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0dc77557-9658-4531-8b09-a2d2373105a3">
+                <propertyInstance
+                  Id="06197c3f-d40f-4e47-8558-63ca390f5e64"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="86111f7a-f350-41f4-a911-e7e473fb7893">
+                <propertyInstance
+                  Id="5152e26d-e02f-4c64-ab28-6b6630ca05f2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f2d2efa-e5f8-4619-9da5-d0515c9e63b3">
+                <propertyInstance
+                  Id="43d2de61-4761-4fe8-86b2-9030304282fc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69e772d7-2e24-40f5-b4c1-eeaa6187277a">
+                <propertyInstance
+                  Id="c3a6f7e4-3615-470f-8903-5b4a0e65a22f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2cce9c3-6b85-4129-8333-d13cd9020fcb">
+                <propertyInstance
+                  Id="027bb280-3eb0-4fa6-92ff-eca5a1ae0f6c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

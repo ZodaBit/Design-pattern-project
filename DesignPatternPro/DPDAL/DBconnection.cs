@@ -10,7 +10,7 @@ namespace DPDAL
 {
      class DBconnection
     {
-        public static string connectionString = "Data Source=DESKTOP-KCA0S6M;Initial Catalog=northwind;Integrated Security=True";
+         public static string connectionString = "Data Source=BEP-W541;Initial Catalog=northwind;Integrated Security=True";
         public static SqlConnection con = new SqlConnection(connectionString);
     }
 }
